@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'SystemController@index');
+Route::get('administrator', 'SystemController@admin');

@@ -12,6 +12,10 @@ class SystemController extends \BaseController {
 		return View::make('index');
 	}
 
+	public function admin(){
+		return View::make('admin');
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
