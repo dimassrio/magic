@@ -42,7 +42,7 @@
 											<tr>
 											@endif
 
-												<td>{{$schedule->vessel->name}}</td>
+												<td><a href="#" data-reveal-id="scheduleModal">{{$schedule->vessel->name}}</a></td>
 												<td>{{$schedule->voyage_no}}</td>
 												<td class="show-for-small-only">
 													@if($schedule->status == 'Loading')
