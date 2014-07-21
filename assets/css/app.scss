@@ -13,7 +13,7 @@ body{
 }
 
 #index-banner{
-	height:300px;
+	height:400px;
 	background: url(images/index-banner.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -26,10 +26,10 @@ body{
   	}
 }
 #footer{
-	margin-top:30px;
 	padding:20px 0;
-	background-color: lighten($body-bg-color, 10%);
+	background-color: #f4a62a;
 	border-top:darken($body-bg-color, 10%) 1px solid;
+	color:#FFFFFF;
 	h4{
 		margin-bottom: 0;
 	}
@@ -38,10 +38,9 @@ body{
 		list-style-type: none;
 		list-style-image: none;
 		margin-left:0;
-		border-left:#59ACFF 10px solid;
-		padding-left:10px;
 		a{
-			color:#FF8000;
+			color:#FFFFFF;
+			text-align: center;
 		}
 	}
 
@@ -115,4 +114,96 @@ body{
 		margin-top:0;
 	}
 
+}
+
+.full-width{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1920px;
+	.row{
+		margin-right:auto;
+	}
+}
+#sidebar{
+	padding-top:50px;
+	background-color:#BEC0B6;
+	min-height:960px;
+	.sidebar-menu{
+		list-style-image: none;
+		list-style-type: none;
+		li{
+			
+			a{
+				display: block;
+				padding-left:20px;
+				font-size:18px;
+				color:#45473D;
+
+			}
+			a:hover{
+				color:#EDEDEB;
+
+			}
+
+		}
+	}
+}
+aside.left-off-canvas-menu{
+	min-height:1000px;
+}
+
+ul.horizontal{
+	li{
+		display: inline;
+	}
+	a{
+		padding:20px 10px 10px 10px;
+	}
+	a.facebook{
+		background-color: #3b5999;
+	}
+	a.twitter{
+		background-color: #01bbf6;
+	}
+	a.linkedin{
+		background-color: #1385c4;
+	}
+	a.youtube{
+		background-color: #fe0000;
+	}
+}
+
+.min-height{
+	min-height:600px;
+}
+@media only screen and (min-width: 64.063em) {
+	th.show-for-small-only, td.show-for-small-only{
+		display:none !important;
+	}
+} /* Define mobile styles */
+
+@media only screen and (min-width: 90.063em) {
+	th.show-for-small-only, td.show-for-small-only{
+		display:none !important;
+	}
+}
+@media only screen and (min-width: 120.063em) {
+	th.show-for-small-only, td.show-for-small-only{
+		display:none !important;
+	}
+}
+
+th.hide-for-large-up{
+	display:none !important;
+}
+
+.tr-loading, table tr.even, table tr.alt, table tr:nth-of-type(even).tr-loading{
+	background-color:#A7FC27;
+}
+.tr-unloading, table tr.even, table tr.alt, table tr:nth-of-type(even).tr-unloading{
+	background-color:#FCCA87;
+}
+.tr-onvoyage, table tr.even, table tr.alt, table tr:nth-of-type(even).tr-onvoyage{
+	background-color:#FFA4B4;
 }

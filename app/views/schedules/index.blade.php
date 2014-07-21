@@ -1,0 +1,1 @@
+E:\Development\php\magic\app/views/schedules/index.blade.php

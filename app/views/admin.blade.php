@@ -1,28 +1,26 @@
 @extends('layout.layout-master')
 
 @section('body')
-	<div class="clearfix section">
-		<div class="large-3 columns no-left-padding text-right" id="sidebar-admin">
-			<h4>FEATURE</h4>
-			<ul>
-				<li><a href="">VESSEL INFORMATION</a></li>
-				<li><a href="">TRACK AND TRACE</a></li>
-			</ul>
-			<hr>
-			<h4>ADMINISTRATION</h4>
-			<ul>
-				<li><a href="">USER INFORMATION</a></li>
-				<li><a href="">USER SUBSCRIBE</a></li>
-			</ul>
-			<hr>
-			<h4>CONTACT</h4>
-			<ul>
-				<li><a href="">CONTACT ILCS</a></li>
-			</ul>
-		</div>
-		<div class="large-9 columns no-right-padding no-left-margin no-left-padding" id="content-admin">
-			<img src="{{asset('assets/images/admin-vessel.jpg')}}" alt="">
-			<h1>VESSEL INFORMATION</h1>
+	<div class="row full-width">
+		<div class="off-canvas-wrap" data-offcanvas>
+			<div class="inner-wrap">
+				<a href="#" class="left-off-canvas-toggle show-for-small-only">MENU</a>
+				<aside class="left-off-canvas-menu">
+					@include('include.sidebar')
+				</aside>
+				<div class="row">
+					<div class="large-3 medium-2 columns show-for-medium-up">
+						@include('include.sidebar')
+					</div>
+					<div class="large-9 small-12 medium-10 columns">
+						<div class="row">
+							<div class="large-12 columns">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 @stop

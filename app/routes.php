@@ -12,4 +12,8 @@
 */
 
 Route::get('/', 'SystemController@index');
+Route::get('login', 'SystemController@login');
+Route::post('login', 'UsersController@login');
 Route::get('administrator', 'SystemController@admin');
+Route::get('administrator/route', 'SystemController@vesselRoute');
+Route::get('administrator/schedule', 'SystemController@vesselSchedule');

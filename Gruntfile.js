@@ -68,7 +68,7 @@ module.exports = function (grunt) {
 			// Files and folders to watch for live reload and rebuild purposes
 			watch: {
 				files: ['<%= options.js.files %>', '<%= options.css.files %>',
-				 '<%= options.sass.base %>/*.sass', '<%= options.sass.base %>/*.scss',
+				 '<%= options.sass.base %>/*.sass', '<%= options.sass.base %>/*.scss', '<%= options.sass.base %>/css/app.scss',
 				 '!<%= options.js.min %>', '!<%= options.sass.compiled %>']
 			}
 		},

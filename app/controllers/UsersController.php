@@ -1,23 +1,21 @@
 <?php
 
-class SystemController extends \BaseController {
+class UsersController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
+	 * GET /users
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		return View::make('index');
-	}
-
-	public function admin(){
-		return View::make('admin');
+		//
 	}
 
 	/**
 	 * Show the form for creating a new resource.
+	 * GET /users/create
 	 *
 	 * @return Response
 	 */
@@ -28,6 +26,7 @@ class SystemController extends \BaseController {
 
 	/**
 	 * Store a newly created resource in storage.
+	 * POST /users
 	 *
 	 * @return Response
 	 */
@@ -38,6 +37,7 @@ class SystemController extends \BaseController {
 
 	/**
 	 * Display the specified resource.
+	 * GET /users/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -49,6 +49,7 @@ class SystemController extends \BaseController {
 
 	/**
 	 * Show the form for editing the specified resource.
+	 * GET /users/{id}/edit
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -60,6 +61,7 @@ class SystemController extends \BaseController {
 
 	/**
 	 * Update the specified resource in storage.
+	 * PUT /users/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -71,6 +73,7 @@ class SystemController extends \BaseController {
 
 	/**
 	 * Remove the specified resource from storage.
+	 * DELETE /users/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
@@ -80,24 +83,18 @@ class SystemController extends \BaseController {
 		//
 	}
 
-	public function dashboard(){
-		return View::make('dashboard');
-	}
-
 	public function login(){
-		return View::make('login');
+			if (Auth::attempt(array('username' => Input::get('username'), 'password' => Input::get('password')))){
+		    	return Redirect::intended('administrator');
+			}else{
+				return Redirect::intended('/');
+			}
 	}
 
-	public function processLogin(){
-		
-	}
-
-	public function vesselRoute(){
-		return View::make('administrator/vessel_route');
-	}
-
-	public function vesselSchedule(){
-		$this->data['schedules'] = Schedule::all();
-		return View::make('administrator/vessel_schedule', $this->data);
+	public function logout(){
+		if(Auth::check()){
+			Auth::logout();
+		}
+		return Redirect::intended('/');
 	}
 }

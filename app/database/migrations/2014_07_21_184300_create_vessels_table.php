@@ -1,0 +1,46 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+
+class CreateVesselsTable extends Migration {
+
+	/**
+	 * Run the migrations.
+	 *
+	 * @return void
+	 */
+	public function up()
+	{
+		Schema::create('vessels', function(Blueprint $table)
+		{
+			$table->increments('id');
+			$table->string('name');
+			$table->string('vessel_id');
+			$table->integer('imo');
+			$table->integer('mmsi');
+			$table->string('call_sign');
+			$table->integer('flag_id');
+			$table->integer('ais_type_id');
+			$table->integer('gross_tonnage');
+			$table->integer('deadweight');
+			$table->integer('length');
+			$table->integer('breadth');
+			$table->integer('year');
+			$table->integer('status');
+			$table->timestamps();
+		});
+	}
+
+
+	/**
+	 * Reverse the migrations.
+	 *
+	 * @return void
+	 */
+	public function down()
+	{
+		Schema::drop('vessels');
+	}
+
+}

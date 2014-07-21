@@ -9,6 +9,7 @@
 
 		<!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
 		<link rel="stylesheet" href="{{asset('assets/vendor/foundation-icon-fonts/foundation-icons.css')}}">
+		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="{{asset('assets/style.min.css')}}">
 		<!--<link rel="stylesheet" href="{{asset('assets/vendor/jquery-ui/themes/base/jquery.ui.all.css')}}">-->
 
